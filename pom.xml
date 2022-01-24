@@ -9,5 +9,6 @@
     <name>parent-project</name>
     <modules>
         <module>store</module>
+        <module>supplier</module>
     </modules>
 </project>

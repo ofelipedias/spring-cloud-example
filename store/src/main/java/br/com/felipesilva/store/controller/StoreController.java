@@ -16,7 +16,7 @@ public class StoreController {
     private final PurchaseService purchaseService;
 
     @PostMapping
-    public void purchase(@RequestBody Purchase purchaseDTO) {
-
+    public void purchase(@RequestBody Purchase purchase) {
+        purchaseService.buy(purchase);
     }
 }
