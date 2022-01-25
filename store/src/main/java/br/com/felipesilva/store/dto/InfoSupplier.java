@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Address {
+public class InfoSupplier {
 
-    private String street;
-    private Integer number;
-    private String state;
+    private String address;
 }
