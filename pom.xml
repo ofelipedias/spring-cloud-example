@@ -10,5 +10,6 @@
     <modules>
         <module>store</module>
         <module>supplier</module>
+        <module>eureka-server</module>
     </modules>
 </project>
