@@ -21,6 +21,7 @@ public class InfoController {
         try {
             return ResponseEntity.ok(infoService.getInfoByState(state));
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.notFound().build(); // TODO implementar ControllerAdvice para tratar exceptions
         }
     }
