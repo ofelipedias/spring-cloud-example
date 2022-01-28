@@ -2,10 +2,10 @@ server:
   port: 8888
 
 spring:
-  profiles:
-    active: native
   cloud:
     config:
       server:
-        native:
-          search-locations: ./config-repo
+        git:
+          uri: https://github.com/ofelipedias/spring-cloud-example
+          search-paths: /config-repo
+          default-label: master
