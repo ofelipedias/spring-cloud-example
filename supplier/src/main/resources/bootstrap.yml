@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: 'supplier'
+  cloud:
+    config:
+      uri: http://localhost:8888

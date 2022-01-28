@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/supplier_db
+    username: admin
+    password: admin
+  jpa:
+    properties:
+      hibernate:
+        default_schema: supplier
+    hibernate:
+      ddl-auto: create
