@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface SupplierClient {
 
     @GetMapping(value = "/info/{state}")
-    InfoSupplier getInfoSupplier(@PathVariable String state);
+    InfoSupplier getInfoSupplier(@PathVariable("state") String state);
 
 }

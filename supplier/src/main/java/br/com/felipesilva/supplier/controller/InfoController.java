@@ -1,5 +1,6 @@
 package br.com.felipesilva.supplier.controller;
 
+import br.com.felipesilva.supplier.exception.InfoSupplierNotFoundException;
 import br.com.felipesilva.supplier.model.InfoSupplier;
 import br.com.felipesilva.supplier.service.InfoService;
 import lombok.RequiredArgsConstructor;
@@ -17,12 +18,9 @@ public class InfoController {
     private final InfoService infoService;
 
     @GetMapping("/{state}")
-    public ResponseEntity<InfoSupplier> getInfoByState(@PathVariable String state) {
-        try {
-            return ResponseEntity.ok(infoService.getInfoByState(state));
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.notFound().build(); // TODO implementar ControllerAdvice para tratar exceptions
-        }
+    public ResponseEntity<InfoSupplier> getInfoByState(@PathVariable("state") String state)
+            throws InfoSupplierNotFoundException {
+        return ResponseEntity.ok(infoService.getInfoByState(state));
     }
+
 }

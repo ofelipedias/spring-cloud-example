@@ -19,12 +19,7 @@ public class StoreController {
 
     @PostMapping
     public ResponseEntity<InfoSupplier> purchase(@RequestBody Purchase purchase) {
-        try {
-            return ResponseEntity.ok(purchaseService.buy(purchase));
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.notFound().build(); // TODO implementar ControllerAdvice para tratar exceptions
-        }
+        return ResponseEntity.ok(purchaseService.buy(purchase));
     }
 
 }
